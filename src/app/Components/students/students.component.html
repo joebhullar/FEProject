@@ -1,1 +1,31 @@
-<p>students works!</p>
+<table>
+    <div *ngFor="let student of studentsArr">
+    <th>
+        <br/>
+        <img src="{{student.pic}}" alt="yoast seo" height="100" width="100"/>
+    </th>
+    <th>
+                
+                    <h3 style="font-size: 700;">{{student.firstName}}</h3>
+                    <span><b>Email: {{student.email}}</b></span><br/>
+                    <span><b>Company: {{student.company}}</b></span><br/>
+                    <span><b>Skill: {{student.skill}}</b></span><br/>
+                    <span><b>Average:{{getAvgForStudent(student)}}</b></span><br/>
+                
+    </th>
+</div> 
+</table>
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm">
+        One of three columns
+      </div>
+      <div class="col-sm">
+        One of three columns
+      </div>
+      <div class="col-sm">
+        One of three columns
+      </div>
+    </div>
+  </div>
