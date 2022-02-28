@@ -16,5 +16,4 @@ export class StudentService {
       return this.http.get<Student[]>("https://api.hatchways.io/assessment/students");
    }
 
-
 }

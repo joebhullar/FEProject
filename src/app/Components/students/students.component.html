@@ -1,3 +1,30 @@
+
+
+
+
+<br/>
+<input type="text" placeholder="Search ..." [(ngModel)]="searchValue" [disabled]=false>
+<button (click)="searchForStudent(searchValue)">Search Button</button>
+<hr/>
+<table>
+    <div *ngFor="let student of studentSearchArr">
+    <th>
+        <br/>
+        <img src="{{student.pic}}" alt="yoast seo" height="100" width="100"/>
+    </th>
+    <th>
+                
+                    <h3 style="font-size: 700;">{{student.firstName}} {{student.lastName}}</h3>
+                    <span><b>Email: {{student.email}}</b></span><br/>
+                    <span><b>Company: {{student.company}}</b></span><br/>
+                    <span><b>Skill: {{student.skill}}</b></span><br/>
+                    <span><b>Average:{{getAvgForStudent(student)}}</b></span><br/>
+                
+    </th>
+</div> 
+</table>
+<hr/>
+<hr/>
 <table>
     <div *ngFor="let student of studentsArr">
     <th>
@@ -6,7 +33,7 @@
     </th>
     <th>
                 
-                    <h3 style="font-size: 700;">{{student.firstName}}</h3>
+                    <h3 style="font-size: 700;">{{student.firstName}} {{student.lastName}}</h3>
                     <span><b>Email: {{student.email}}</b></span><br/>
                     <span><b>Company: {{student.company}}</b></span><br/>
                     <span><b>Skill: {{student.skill}}</b></span><br/>
@@ -17,7 +44,7 @@
 </table>
 
 <div class="container">
-    <div class="row">
+    <div class="column">
       <div class="col-sm">
         One of three columns
       </div>
