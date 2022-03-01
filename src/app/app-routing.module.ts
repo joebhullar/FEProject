@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { StudentsComponent } from './Components/students/students.component';
+import { SearchFilterPipe } from './CustomPipes/search-filter.pipe';
 
 const routes: Routes = [
   {path:'', redirectTo: '/Students', pathMatch:'full'},
@@ -12,7 +13,8 @@ const routes: Routes = [
 
 @NgModule({
   declarations:[
-    StudentsComponent
+    StudentsComponent,
+    SearchFilterPipe,
   ],
   imports: [CommonModule, FormsModule, RouterModule.forRoot(routes), HttpClientModule],
   exports: [RouterModule]

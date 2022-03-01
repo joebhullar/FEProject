@@ -1,11 +1,24 @@
 
+<div class="container mt-5" style="max-width: 550px;">
 
+    <div class="form-group">
+      <input type="text" class="form-control mb-4" placeholder="Search bar" [(ngModel)]="searchValue" id="listSearch">
+    </div>
+  
+    <div class="card mb-1" *ngFor="let student of studentSearchArr | searchFilter: searchValue">
+      <div class="card-body">
+        <h5 class="card-title">{{student.firstName}} {{student.lastName}}</h5>
+      </div>
+    </div>
+  
+  </div>
 
 
 <br/>
 <input type="text" placeholder="Search ..." [(ngModel)]="searchValue" [disabled]=false>
 <button (click)="searchForStudent(searchValue)">Search Button</button>
 <hr/>
+<h2>-------------------------------------------------------------------</h2>
 <table>
     <div *ngFor="let student of studentSearchArr">
     <th>
@@ -23,7 +36,7 @@
     </th>
 </div> 
 </table>
-<hr/>
+<hr/> <br/> <h2>-------------------------------------------------------------------</h2>
 <hr/>
 <table>
     <div *ngFor="let student of studentsArr">
